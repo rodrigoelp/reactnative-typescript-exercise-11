@@ -55,3 +55,23 @@ I am going to try to build the interface as close as possible to minimise differ
 Well... Android reports a set of 29 font families (9 are `sans-serif` variations and 2 are `serif`, everything else is different) and iOS reported 78 font families (very different to the 294 reported on the list that does not crash the application).
 
 Unfortunately, passing complex objects is not supported at all (discovered this while paying with early implementations of this app). I wish facebook decides to revise this api and make it better... for one, provide a mechanism to serialize objects into json and automatically reads it into an object on the other side. At the moment, this will work only if you manually serialise everything and pass it through as a `string`.
+
+## How to run this code?
+
+```sh
+# Cloning the repo to 'typography'
+git clone git@github.com:rodrigoelp/reactnative-typescript-exercise-11.git typography-2.0
+# Changing directory
+cd typography-2.0
+# Installing dependencies
+yarn # if you have not installed yarn, then change it to: npm install
+# Compiling the typescript code
+./node_modules/.bin/tsc
+# Launching the react-native development server
+open -a Terminal "`react-native start`"
+# Compiling the code for ios and deploying it to the simulator
+react-native run-ios # optionally, type: react-native run-android
+# Alternatively, you could comment the line above and run the two lines below.
+# open -a Terminal "`react-native run-ios`"
+# open -a Terminal "`react-native run-android`"
+```
